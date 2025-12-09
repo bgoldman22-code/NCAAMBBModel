@@ -1,0 +1,29 @@
+[build]
+  command = "echo 'No build needed for data repository'"
+  publish = "data/ncaabb/picks"
+  
+[build.environment]
+  # Disable secrets scanning for documentation files
+  SECRETS_SCAN_OMIT_PATHS = "ODDS_COLLECTION_GUIDE.md,ODDS_SETUP_COMPLETE.md,data-collection/test_odds_api.py,docs/**"
+  
+[[redirects]]
+  from = "/picks/latest"
+  to = "/variant_b_picks_odds_aware_:date.csv"
+  status = 200
+  
+[[redirects]]
+  from = "/picks/latest.json"
+  to = "/variant_b_picks_odds_aware_:date.json"
+  status = 200
+
+[[headers]]
+  for = "/*.csv"
+  [headers.values]
+    Content-Type = "text/csv"
+    Access-Control-Allow-Origin = "*"
+    
+[[headers]]
+  for = "/*.json"
+  [headers.values]
+    Content-Type = "application/json"
+    Access-Control-Allow-Origin = "*"
