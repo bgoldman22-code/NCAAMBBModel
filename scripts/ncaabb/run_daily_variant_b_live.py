@@ -21,9 +21,18 @@ from datetime import datetime
 import pytz
 
 # Add project root to path
-sys.path.append(str(Path(__file__).parent.parent))
+project_root = Path(__file__).parent.parent.parent
+sys.path.insert(0, str(project_root))
 
-from scripts.ncaabb.generate_variant_b_picks import generate_picks
+# Now we can import from the project
+import importlib.util
+spec = importlib.util.spec_from_file_location(
+    "generate_variant_b_picks",
+    project_root / "scripts" / "ncaabb" / "generate_variant_b_picks.py"
+)
+generate_module = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(generate_module)
+generate_picks = generate_module.generate_picks
 
 
 class Args:
@@ -77,7 +86,7 @@ def main():
     # Set output path
     output_dir = Path('data/ncaabb/picks')
     output_dir.mkdir(parents=True, exist_ok=True)
-    output_file = output_dir / f'variant_b_picks_{date_str}.csv'
+    output_file = output_dir / f'variant_b_picks_odds_aware_{date_str}.csv'
     
     print(f"  Output: {output_file}")
     
