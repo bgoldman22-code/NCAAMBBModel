@@ -1,0 +1,3 @@
+date,home_team,away_team,side,odds,model_prob,implied_prob,edge,kelly_full,kelly_applied,bet_size_dollars,market
+2025-12-09,Brigham Young Cougars,Clemson Tigers,home,-295,0.9563023573820345,0.7468354430379747,0.20946691434405984,0.6179273973149766,0.1,1000,home_ml
+2025-12-09,VMI Keydets,Loyola (MD) Greyhounds,away,-118,0.7431313059524203,0.5412844036697247,0.20184690228269553,0.23817934469358074,0.059544836173395184,595,away_ml
