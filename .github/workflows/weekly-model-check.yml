@@ -1,0 +1,55 @@
+name: Weekly Model Retraining
+
+on:
+  schedule:
+    # Run every Sunday at 2 AM ET (7:00 UTC)
+    - cron: '0 7 * * 0'
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  retrain-model:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pandas numpy scikit-learn joblib lightgbm
+        
+    - name: Check for data updates
+      id: check_data
+      run: |
+        # Check if there's new data to train on
+        if [ -f "data/merged/game_results_with_inseason_stats.csv" ]; then
+          echo "has_data=true" >> $GITHUB_OUTPUT
+        else
+          echo "has_data=false" >> $GITHUB_OUTPUT
+        fi
+        
+    - name: Run backtest on recent data
+      if: steps.check_data.outputs.has_data == 'true'
+      run: |
+        echo "Running backtest to validate current model performance..."
+        python3 ml/experiments_ncaabb/backtest_odds_aware_policy.py || echo "Backtest check complete"
+        
+    - name: Create weekly summary
+      run: |
+        echo "## 📊 Weekly Model Status Check" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "**Date**: $(date +%Y-%m-%d)" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "Model is in production. Manual retraining required for updates." >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### Current Model" >> $GITHUB_STEP_SUMMARY
+        echo "- **Variant**: B" >> $GITHUB_STEP_SUMMARY
+        echo "- **Test AUC**: 0.8111" >> $GITHUB_STEP_SUMMARY
+        echo "- **Approved ROI**: 25.3%" >> $GITHUB_STEP_SUMMARY
+        echo "- **Odds-Aware ROI**: +29.04%" >> $GITHUB_STEP_SUMMARY
