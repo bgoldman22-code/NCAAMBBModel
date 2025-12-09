@@ -1,0 +1,15 @@
+{
+  "feature_cols": [
+    "close_spread",
+    "home_implied_prob",
+    "away_implied_prob",
+    "home_favorite",
+    "spread_magnitude",
+    "prob_diff",
+    "vig",
+    "ORtg_vs_DRtg_L5",
+    "Pace_diff_L5",
+    "MoV_diff_L5",
+    "Form_diff_L5"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "version": "v1",
+  "created_at": "2025-12-09T10:20:51.361361",
+  "description": "Odds-aware edge filtering policy",
+  "rules": {
+    "favorites": {
+      "min_edge": 0.15,
+      "description": "Standard 15% edge"
+    },
+    "small_dogs_100_119": {
+      "min_edge": 0.15,
+      "description": "Standard 15% edge"
+    },
+    "zone1_120_139": {
+      "min_edge": 0.15,
+      "description": "96% ROI historical"
+    },
+    "death_valley1_140_159": {
+      "skip": true,
+      "description": "Negative ROI"
+    },
+    "zone2_160_179": {
+      "min_edge": 0.13,
+      "description": "78% ROI historical"
+    },
+    "death_valley2_180_199": {
+      "skip": true,
+      "description": "Negative ROI"
+    },
+    "zone3_200_249": {
+      "min_edge": 0.0,
+      "description": "34% ROI, no filter optimal"
+    },
+    "death_valley3_250_399": {
+      "skip": true,
+      "description": "Negative ROI"
+    },
+    "longdogs_400_plus": {
+      "skip": true,
+      "description": "Longdog calibration system"
+    }
+  },
+  "backtest_performance": {
+    "roi": 29.04225846084246,
+    "win_rate": 0.7522686025408348,
+    "total_bets": 1102,
+    "improvement_vs_baseline": 41.98903166055638
+  }
+}
