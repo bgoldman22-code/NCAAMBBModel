@@ -16,6 +16,9 @@ data/
 # BUT allow essential production files
 !data/merged/game_results_with_inseason_stats.csv
 !data/walkforward_results_with_scores.csv
+!data/ncaabb/picks/
+!data/ncaabb/logs/
+!data/ncaabb/experiments/
 !models/**/*.pkl
 !models/**/*.json
 

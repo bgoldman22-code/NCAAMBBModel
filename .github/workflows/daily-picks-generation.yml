@@ -50,9 +50,9 @@ jobs:
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-        git add data/ncaabb/picks/
-        git add data/ncaabb/logs/
-        git add data/ncaabb/experiments/
+        git add -f data/ncaabb/picks/*.csv data/ncaabb/picks/*.json
+        git add -f data/ncaabb/logs/*.csv
+        git add -f data/ncaabb/experiments/*.csv
         git commit -m "Auto-generated picks for ${{ steps.check_picks.outputs.picks_date }}" || echo "No changes to commit"
         git push
         

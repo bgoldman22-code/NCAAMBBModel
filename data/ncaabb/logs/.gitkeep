@@ -1,0 +1,25 @@
+# Variant B Run Logs
+
+This directory contains execution logs for the Variant B picks generator.
+
+## Files
+
+- `variant_b_runs.csv` - Log of all picks generation runs
+
+### Log Columns:
+- `timestamp` - Run timestamp
+- `date` - Target date for picks
+- `mode` - Mode (live/historical)
+- `num_games` - Games evaluated
+- `num_picks` - Picks generated
+- `num_longdogs` - Longdogs filtered
+- `total_stake` - Total stake amount
+- `avg_edge` - Average edge
+- `max_edge` - Maximum edge
+- `api_quota_used` - API quota consumed
+- `status` - Run status (success/error)
+- `error_message` - Error details if failed
+
+## Purpose
+
+Tracks all automated and manual picks generation runs for monitoring and debugging.

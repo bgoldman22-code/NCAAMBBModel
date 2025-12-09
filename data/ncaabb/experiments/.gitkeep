@@ -1,0 +1,32 @@
+# Longdog Calibration Experiments
+
+This directory contains data for calibrating predictions on extreme underdog bets (+400 or higher).
+
+## Files
+
+- `variant_b_longdogs_raw.csv` - Raw longdog bets logged from production
+
+### Data Columns:
+- `date` - Game date
+- `home_team` - Home team
+- `away_team` - Away team
+- `bet_side` - Side of longdog bet (home/away)
+- `american_odds` - Odds (≥+400)
+- `implied_prob_market` - Market's implied probability
+- `model_prob` - Raw model probability (uncalibrated)
+- `edge` - Raw edge
+- `outcome` - Actual game outcome (1=win, 0=loss) - filled after game
+
+## Purpose
+
+These extreme underdogs are excluded from production picks but logged for research.
+Once sufficient data is collected (50+ samples), we can:
+1. Train Platt/Isotonic calibrators specifically for longdogs
+2. Determine if any longdog ranges are profitable after calibration
+3. Potentially expand the betting universe with calibrated longdog picks
+
+## Status
+
+**Accumulating data** - Need 50+ samples with outcomes before training calibrators.
+
+See: `ml/experiments_ncaabb/underdog_longdogs_calibration.py`
