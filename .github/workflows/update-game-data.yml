@@ -6,6 +6,9 @@ on:
     - cron: '0 8 * * *'
   workflow_dispatch:  # Allow manual trigger
 
+permissions:
+  contents: write  # Allow workflow to commit and push
+
 env:
   ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
 

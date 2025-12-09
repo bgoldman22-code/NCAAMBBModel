@@ -7,6 +7,9 @@ on:
   workflow_dispatch:  # Allow manual trigger
   workflow_call:  # Allow trigger from other workflows
 
+permissions:
+  contents: write  # Allow workflow to commit and push
+
 env:
   ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
   VARIANT_B_MIN_EDGE: 0.10
