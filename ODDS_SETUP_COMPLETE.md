@@ -70,7 +70,7 @@ python3 data-collection/collect_odds_historical.py \
 
 ## 🔑 API Key Information
 
-**Your API Key**: `c5d3fe15e6c5be83b2acd8695cff012b`
+**Your API Key**: `YOUR_API_KEY_HERE`
 
 **Status**: ✅ Validated and working
 - Quota remaining: **4,981,165** (essentially unlimited with paid plan)
@@ -90,7 +90,7 @@ python3 data-collection/collect_odds_historical.py \
 
 Add to `~/.zshrc` for persistence:
 ```bash
-echo 'export ODDS_API_KEY="c5d3fe15e6c5be83b2acd8695cff012b"' >> ~/.zshrc
+echo 'export ODDS_API_KEY="YOUR_API_KEY_HERE"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
@@ -227,7 +227,7 @@ python3 ml/backtest_ncaabb_betting.py \
 
 ```bash
 # 1. Set API key (first time only)
-export ODDS_API_KEY="c5d3fe15e6c5be83b2acd8695cff012b"
+export ODDS_API_KEY="YOUR_API_KEY_HERE"
 
 # 2. Collect 2024 season odds
 ./data-collection/collect_odds_season.sh 2024
@@ -365,7 +365,7 @@ ODDS_API_TO_ESPN = {
 
 **Solution**:
 ```bash
-export ODDS_API_KEY="c5d3fe15e6c5be83b2acd8695cff012b"
+export ODDS_API_KEY="YOUR_API_KEY_HERE"
 ```
 
 Or add to `~/.zshrc` for persistence.

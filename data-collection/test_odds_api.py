@@ -9,7 +9,7 @@ This script:
 4. Reports API quota usage
 
 Usage:
-    export ODDS_API_KEY="c5d3fe15e6c5be83b2acd8695cff012b"
+    export ODDS_API_KEY="YOUR_API_KEY_HERE"
     python3 data-collection/test_odds_api.py
 """
 
@@ -19,7 +19,7 @@ import requests
 from datetime import datetime, timedelta
 
 
-API_KEY = "c5d3fe15e6c5be83b2acd8695cff012b"
+API_KEY = "YOUR_API_KEY_HERE"
 BASE_URL = "https://api.the-odds-api.com/v4"
 
 
