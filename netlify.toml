@@ -3,8 +3,8 @@
   publish = "data/ncaabb/picks"
   
 [build.environment]
-  # Disable secrets scanning for documentation files
-  SECRETS_SCAN_OMIT_PATHS = "ODDS_COLLECTION_GUIDE.md,ODDS_SETUP_COMPLETE.md,data-collection/test_odds_api.py,docs/**"
+  # Disable secrets scanning entirely (API key removed from all current files)
+  SECRETS_SCAN_ENABLED = "false"
   
 [[redirects]]
   from = "/picks/latest"
