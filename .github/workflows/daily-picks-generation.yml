@@ -5,6 +5,7 @@ on:
     # Run at 9 AM ET (14:00 UTC) every day during basketball season
     - cron: '0 14 * * *'
   workflow_dispatch:  # Allow manual trigger
+  workflow_call:  # Allow trigger from other workflows
 
 env:
   ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}

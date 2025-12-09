@@ -13,6 +13,12 @@ data/
 *.json
 *.pkl
 
+# BUT allow essential production files
+!data/merged/game_results_with_inseason_stats.csv
+!data/walkforward_results_with_scores.csv
+!models/**/*.pkl
+!models/**/*.json
+
 # Python
 __pycache__/
 *.py[cod]
