@@ -1,0 +1,42 @@
+# .gitignore for NCAA Basketball Project
+
+# API credentials (NEVER COMMIT THESE!)
+data-collection/kenpom_config.py
+kenpom_config.py
+**/collect_odds_season.sh
+.env
+.env.local
+
+# Data files
+data/
+*.csv
+*.json
+*.pkl
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
