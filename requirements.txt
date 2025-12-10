@@ -1,0 +1,18 @@
+# NCAA Basketball Model Dependencies
+# Pin versions for reproducibility and model compatibility
+
+# Core data processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Machine learning - MUST match training version
+scikit-learn==1.7.2
+
+# Model serialization
+joblib>=1.3.0
+
+# Timezone handling
+pytz>=2023.3
+
+# API requests
+requests>=2.31.0
