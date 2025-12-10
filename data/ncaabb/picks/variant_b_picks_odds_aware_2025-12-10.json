@@ -4,9 +4,9 @@
   "min_edge": 0.1,
   "kelly_fraction": 0.25,
   "bankroll": 10000.0,
-  "num_picks": 6,
-  "total_bet_size": 5609,
-  "avg_edge": 0.32240949342228153,
+  "num_picks": 5,
+  "total_bet_size": 4609,
+  "avg_edge": 0.2920080777875139,
   "max_edge": 0.5111542514878525,
   "picks": [
     {
@@ -21,20 +21,6 @@
       "kelly_full": 0.38723806930897914,
       "kelly_applied": 0.09680951732724478,
       "bet_size_dollars": 968,
-      "market": "away_ml"
-    },
-    {
-      "date": "2025-12-11",
-      "home_team": "CSU Northridge Matadors",
-      "away_team": "Fresno St",
-      "side": "away",
-      "odds": 108,
-      "model_prob": 0.9551858023653501,
-      "implied_prob": 0.4807692307692308,
-      "edge": 0.47441657159611933,
-      "kelly_full": 0.4392746033297401,
-      "kelly_applied": 0.1,
-      "bet_size_dollars": 1000,
       "market": "away_ml"
     },
     {
