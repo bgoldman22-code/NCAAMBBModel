@@ -1,0 +1,2 @@
+date,home_team,away_team,side,odds,model_prob,implied_prob,edge,kelly_full,kelly_applied,bet_size_dollars,market
+2025-12-10,UNC Asheville,Miami (OH) RedHawks,away,-196,0.8199268851205727,0.6621621621621622,0.15776472295841049,0.3092188569984846,0.07730471424962115,773,away_ml

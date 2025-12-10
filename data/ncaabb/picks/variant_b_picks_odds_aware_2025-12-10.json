@@ -1,0 +1,27 @@
+{
+  "date": "2025-12-10",
+  "model": "Variant B",
+  "min_edge": 0.1,
+  "kelly_fraction": 0.25,
+  "bankroll": 10000.0,
+  "num_picks": 1,
+  "total_bet_size": 773,
+  "avg_edge": 0.15776472295841049,
+  "max_edge": 0.15776472295841049,
+  "picks": [
+    {
+      "date": "2025-12-10",
+      "home_team": "UNC Asheville",
+      "away_team": "Miami (OH) RedHawks",
+      "side": "away",
+      "odds": -196,
+      "model_prob": 0.8199268851205727,
+      "implied_prob": 0.6621621621621622,
+      "edge": 0.15776472295841049,
+      "kelly_full": 0.3092188569984846,
+      "kelly_applied": 0.07730471424962115,
+      "bet_size_dollars": 773,
+      "market": "away_ml"
+    }
+  ]
+}
