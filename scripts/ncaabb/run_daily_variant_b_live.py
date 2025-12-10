@@ -2,7 +2,7 @@
 Daily automation script for Variant B live picks generation.
 
 This script is designed to be run by cron, GitHub Actions, or Netlify scheduled functions.
-It generates picks for today's NCAA basketball games using live odds.
+It generates picks for NCAA basketball games in the next 72 hours using live odds.
 
 Usage:
     python3 scripts/ncaabb/run_daily_variant_b_live.py
@@ -12,12 +12,13 @@ Environment Variables:
     VARIANT_B_MIN_EDGE: Minimum edge threshold (default: 0.15)
     VARIANT_B_KELLY_FRACTION: Kelly fraction (default: 0.25)
     VARIANT_B_BANKROLL: Bankroll in dollars (default: 10000)
+    VARIANT_B_LOOKAHEAD_HOURS: Hours to look ahead for games (default: 72)
 """
 
 import os
 import sys
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, timedelta
 import pytz
 
 # Add project root to path
@@ -37,13 +38,14 @@ generate_picks = generate_module.generate_picks
 
 class Args:
     """Simple args container to mimic argparse."""
-    def __init__(self, date, mode, min_edge, kelly_fraction, bankroll, output):
+    def __init__(self, date, mode, min_edge, kelly_fraction, bankroll, output, lookahead_hours=72):
         self.date = date
         self.mode = mode
         self.min_edge = min_edge
         self.kelly_fraction = kelly_fraction
         self.bankroll = bankroll
         self.output = output
+        self.lookahead_hours = lookahead_hours
 
 
 def main():
@@ -59,7 +61,12 @@ def main():
     today = datetime.now(tz).date()
     date_str = today.strftime('%Y-%m-%d')
     
-    print(f"Target date: {date_str} (America/New_York)")
+    # Get lookahead hours from environment
+    lookahead_hours = int(os.getenv('VARIANT_B_LOOKAHEAD_HOURS', '72'))
+    end_date = (datetime.now(tz) + timedelta(hours=lookahead_hours)).date()
+    
+    print(f"Target date range: {date_str} to {end_date.strftime('%Y-%m-%d')} ({lookahead_hours}h lookahead)")
+    print(f"Timezone: America/New_York")
     
     # Get config from environment with defaults
     min_edge = float(os.getenv('VARIANT_B_MIN_EDGE', '0.15'))
@@ -69,6 +76,7 @@ def main():
     
     print(f"\nConfiguration:")
     print(f"  Mode: {mode}")
+    print(f"  Lookahead: {lookahead_hours} hours")
     print(f"  Min Edge: {min_edge}")
     print(f"  Kelly Fraction: {kelly_fraction}")
     print(f"  Bankroll: ${bankroll:,.0f}")
@@ -97,7 +105,8 @@ def main():
         min_edge=min_edge,
         kelly_fraction=kelly_fraction,
         bankroll=bankroll,
-        output=str(output_file)
+        output=str(output_file),
+        lookahead_hours=lookahead_hours
     )
     
     # Run picks generation

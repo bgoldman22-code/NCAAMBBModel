@@ -67,31 +67,33 @@ except ImportError:
     LIVE_ODDS_AVAILABLE = False
     print("⚠️  Warning: live_odds_client not available, --mode live will fail")
 
-def load_todays_games(date_str: str, mode: str = 'historical') -> pd.DataFrame:
+def load_todays_games(date_str: str, mode: str = 'historical', lookahead_hours: int = 72) -> pd.DataFrame:
     """
-    Load scheduled games and odds for a given date.
+    Load scheduled games and odds for a given date range.
     
     Args:
-        date_str: Date string (YYYY-MM-DD)
+        date_str: Start date string (YYYY-MM-DD)
         mode: 'historical' or 'live'
+        lookahead_hours: Hours to look ahead from start date (default: 72)
     
     Returns:
         DataFrame with game schedule and odds
     """
-    print(f"\n📅 Loading games for {date_str} (mode: {mode})...")
+    print(f"\n📅 Loading games for {date_str} + {lookahead_hours}h (mode: {mode})...")
     
     if mode == 'live':
-        return load_todays_games_live(date_str)
+        return load_todays_games_live(date_str, lookahead_hours)
     else:
-        return load_todays_games_historical(date_str)
+        return load_todays_games_historical(date_str, lookahead_hours)
 
 
-def load_todays_games_live(date_str: str) -> pd.DataFrame:
+def load_todays_games_live(date_str: str, lookahead_hours: int = 72) -> pd.DataFrame:
     """
-    Load games and odds from live API.
+    Load games and odds from live API for the next N hours.
     
     Args:
-        date_str: Date string (YYYY-MM-DD)
+        date_str: Start date string (YYYY-MM-DD)
+        lookahead_hours: Hours to look ahead (default: 72)
     
     Returns:
         DataFrame with live odds
@@ -105,8 +107,8 @@ def load_todays_games_live(date_str: str) -> pd.DataFrame:
     target_date = pd.to_datetime(date_str).date()
     
     try:
-        # Fetch from API with fallback
-        df = fetch_odds_with_fallback(target_date)
+        # Fetch from API with fallback, using lookahead hours
+        df = fetch_odds_with_fallback(target_date, lookahead_hours=lookahead_hours)
         
         if len(df) == 0:
             print(f"   ⚠️  No games found via API for {date_str}")
@@ -132,12 +134,13 @@ def load_todays_games_live(date_str: str) -> pd.DataFrame:
         raise
 
 
-def load_todays_games_historical(date_str: str) -> pd.DataFrame:
+def load_todays_games_historical(date_str: str, lookahead_hours: int = 72) -> pd.DataFrame:
     """
-    Load games from pre-collected historical data.
+    Load games from pre-collected historical data for the next N hours.
     
     Args:
-        date_str: Date string (YYYY-MM-DD)
+        date_str: Start date string (YYYY-MM-DD)
+        lookahead_hours: Hours to look ahead (default: 72)
     
     Returns:
         DataFrame with historical odds
@@ -157,11 +160,12 @@ def load_todays_games_historical(date_str: str) -> pd.DataFrame:
     else:
         df['date'] = pd.to_datetime(df['date'])
     
-    # Filter to specified date
+    # Filter to date range (start_date to start_date + lookahead_hours)
     target_date = pd.to_datetime(date_str)
-    games = df[df['date'] == target_date].copy()
+    end_date = target_date + timedelta(hours=lookahead_hours)
+    games = df[(df['date'] >= target_date) & (df['date'] < end_date)].copy()
     
-    print(f"   Found {len(games)} games on {date_str}")
+    print(f"   Found {len(games)} games between {date_str} and {end_date.date()}")
     
     if len(games) == 0:
         print(f"   ⚠️  No games found. Using nearby date for demo...")
@@ -298,17 +302,21 @@ def merge_games_with_stats(games_df: pd.DataFrame, stats_df: pd.DataFrame) -> pd
 def generate_picks(args):
     """Main picks generation logic."""
     
+    # Get lookahead hours from args (default to 72 if not present)
+    lookahead_hours = getattr(args, 'lookahead_hours', 72)
+    
     print("="*80)
     print("NCAA Basketball Variant B - Live Picks Generator")
     print("="*80)
     print(f"\nMode: {args.mode}")
     print(f"Date: {args.date}")
+    print(f"Lookahead: {lookahead_hours} hours")
     print(f"Min Edge: {args.min_edge}")
     print(f"Kelly Fraction: {args.kelly_fraction}")
     print(f"Bankroll: ${args.bankroll:,.0f}")
     
     # 1. Load today's games
-    games_df = load_todays_games(args.date, mode=args.mode)
+    games_df = load_todays_games(args.date, mode=args.mode, lookahead_hours=lookahead_hours)
     
     if len(games_df) == 0:
         print("\n❌ No games found for this date")
@@ -701,6 +709,8 @@ def main():
                         help='Date for picks (YYYY-MM-DD)')
     parser.add_argument('--mode', type=str, default='historical', choices=['historical', 'live'],
                         help='Data source mode: historical (pre-collected) or live (API)')
+    parser.add_argument('--lookahead-hours', type=int, default=72,
+                        help='Hours to look ahead from start date (default: 72)')
     parser.add_argument('--min-edge', type=float, default=0.15,
                         help='Minimum edge threshold (default: 0.15)')
     parser.add_argument('--kelly-fraction', type=float, default=0.25,

@@ -97,17 +97,19 @@ def fetch_today_moneyline_odds(
     api_key: Optional[str] = None,
     base_url: Optional[str] = None,
     primary_book: Optional[str] = None,
-    timeout: int = 30
+    timeout: int = 30,
+    lookahead_hours: int = 72
 ) -> pd.DataFrame:
     """
-    Fetch moneyline odds for NCAA basketball games on a specific date.
+    Fetch moneyline odds for NCAA basketball games in the next N hours from target date.
     
     Args:
-        target_date: Date to fetch odds for
+        target_date: Start date to fetch odds from
         api_key: The Odds API key (defaults to ODDS_API_KEY env var)
         base_url: API base URL (defaults to ODDS_API_BASE_URL env var)
         primary_book: Preferred sportsbook (defaults to ODDS_PRIMARY_BOOK env var)
         timeout: Request timeout in seconds
+        lookahead_hours: Hours to look ahead from target date (default: 72)
     
     Returns:
         DataFrame with columns:
@@ -154,6 +156,7 @@ def fetch_today_moneyline_odds(
     
     print(f"📡 Fetching NCAA basketball odds from The Odds API...")
     print(f"   Target date: {target_date}")
+    print(f"   Lookahead: {lookahead_hours} hours")
     print(f"   Primary book: {primary_book}")
     
     try:
@@ -174,13 +177,15 @@ def fetch_today_moneyline_odds(
         
         # Parse games
         games = []
-        target_date_str = target_date.isoformat()
+        target_datetime = datetime.combine(target_date, datetime.min.time())
+        end_datetime = target_datetime + timedelta(hours=lookahead_hours)
         
         for game in data:
-            game_date = datetime.fromisoformat(game['commence_time'].replace('Z', '+00:00')).date()
+            game_datetime = datetime.fromisoformat(game['commence_time'].replace('Z', '+00:00')).replace(tzinfo=None)
+            game_date = game_datetime.date()
             
-            # Filter to target date
-            if game_date != target_date:
+            # Filter to date range (target_date to target_date + lookahead_hours)
+            if not (target_datetime <= game_datetime < end_datetime):
                 continue
             
             game_id = game.get('id', '')
@@ -289,14 +294,16 @@ def load_team_name_mapping(mapping_file: Optional[Path] = None) -> Dict[str, str
 
 def fetch_odds_with_fallback(
     target_date: date,
-    fallback_books: Optional[List[str]] = None
+    fallback_books: Optional[List[str]] = None,
+    lookahead_hours: int = 72
 ) -> pd.DataFrame:
     """
     Fetch odds with fallback to multiple books if primary fails.
     
     Args:
-        target_date: Date to fetch odds for
+        target_date: Start date to fetch odds from
         fallback_books: List of book keys to try (default: fanduel, draftkings, betmgm)
+        lookahead_hours: Hours to look ahead from target date (default: 72)
     
     Returns:
         DataFrame of odds, preferring first successful book
@@ -305,7 +312,7 @@ def fetch_odds_with_fallback(
     
     for book in fallback_books:
         try:
-            df = fetch_today_moneyline_odds(target_date, primary_book=book)
+            df = fetch_today_moneyline_odds(target_date, primary_book=book, lookahead_hours=lookahead_hours)
             if len(df) > 0:
                 return df
         except Exception as e:
