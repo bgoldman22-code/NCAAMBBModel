@@ -1,0 +1,3 @@
+date,home_team,away_team,side,odds,model_prob,implied_prob,edge,kelly_full,kelly_applied,bet_size_dollars,market
+2025-12-11,IUPUI Jaguars,Green Bay Phoenix,away,-140,0.9655157307704083,0.5833333333333334,0.38218239743707494,0.5350553564119048,0.1,1000,away_ml
+2025-12-12,CSU Bakersfield Roadrunners,North Dakota St Bison,away,-295,0.9587622324037364,0.7468354430379747,0.2119267893657617,0.625184028628997,0.1,1000,away_ml
