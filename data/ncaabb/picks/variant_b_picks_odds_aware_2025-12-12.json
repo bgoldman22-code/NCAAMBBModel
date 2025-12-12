@@ -4,9 +4,9 @@
   "min_edge": 0.1,
   "kelly_fraction": 0.25,
   "bankroll": 10000.0,
-  "num_picks": 3,
-  "total_bet_size": 2781,
-  "avg_edge": 0.2105262809678979,
+  "num_picks": 4,
+  "total_bet_size": 3781,
+  "avg_edge": 0.19696681968371116,
   "max_edge": 0.3032137141998127,
   "picks": [
     {
@@ -47,6 +47,20 @@
       "implied_prob": 0.7402597402597403,
       "edge": 0.16222013091689624,
       "kelly_full": 0.4623273731131543,
+      "kelly_applied": 0.1,
+      "bet_size_dollars": 1000,
+      "market": "home_ml"
+    },
+    {
+      "date": "2025-12-13",
+      "home_team": "North Carolina A&T Aggies",
+      "away_team": "Maryland-Eastern Shore Hawks",
+      "side": "home",
+      "odds": -320,
+      "model_prob": 0.9181931977359128,
+      "implied_prob": 0.7619047619047619,
+      "edge": 0.15628843583115093,
+      "kelly_full": 0.500122994659683,
       "kelly_applied": 0.1,
       "bet_size_dollars": 1000,
       "market": "home_ml"
