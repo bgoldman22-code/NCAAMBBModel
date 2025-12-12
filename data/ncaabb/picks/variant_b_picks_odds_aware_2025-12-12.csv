@@ -1,0 +1,4 @@
+date,home_team,away_team,side,odds,model_prob,implied_prob,edge,kelly_full,kelly_applied,bet_size_dollars,market
+2025-12-13,Austin Peay Governors,East Tennessee St Buccaneers,away,-205,0.9753448617407963,0.6721311475409836,0.3032137141998127,0.621588114109616,0.1,1000,away_ml
+2025-12-13,Eastern Washington Eagles,Cal Baptist Lancers,away,-188,0.8189227755647626,0.6527777777777778,0.16614499778698477,0.3123525958395314,0.07808814895988285,781,away_ml
+2025-12-12,UMBC Retrievers,Army Knights,home,-285,0.9024798711766365,0.7402597402597403,0.16222013091689624,0.4623273731131543,0.1,1000,home_ml
