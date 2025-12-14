@@ -1,0 +1,69 @@
+{
+  "date": "2025-12-14",
+  "model": "Variant B",
+  "min_edge": 0.1,
+  "kelly_fraction": 0.25,
+  "bankroll": 10000.0,
+  "num_picks": 4,
+  "total_bet_size": 3193,
+  "avg_edge": 0.33090923711214204,
+  "max_edge": 0.5245116816421279,
+  "picks": [
+    {
+      "date": "2025-12-14",
+      "home_team": "Vermont Catamounts",
+      "away_team": "Merrimack Warriors",
+      "side": "away",
+      "odds": 220,
+      "model_prob": 0.8370116816421279,
+      "implied_prob": 0.3125,
+      "edge": 0.5245116816421279,
+      "kelly_full": 0.23841440074642176,
+      "kelly_applied": 0.05960360018660544,
+      "bet_size_dollars": 596,
+      "market": "away_ml"
+    },
+    {
+      "date": "2025-12-14",
+      "home_team": "Fairfield Stags",
+      "away_team": "Monmouth Hawks",
+      "side": "away",
+      "odds": -140,
+      "model_prob": 0.9466354345022328,
+      "implied_prob": 0.5833333333333334,
+      "edge": 0.3633021011688994,
+      "kelly_full": 0.508622941636459,
+      "kelly_applied": 0.1,
+      "bet_size_dollars": 1000,
+      "market": "away_ml"
+    },
+    {
+      "date": "2025-12-14",
+      "home_team": "UAB Blazers",
+      "away_team": "Troy Trojans",
+      "side": "home",
+      "odds": -335,
+      "model_prob": 0.9964831690834284,
+      "implied_prob": 0.7701149425287356,
+      "edge": 0.2263682265546928,
+      "kelly_full": 0.758333558958221,
+      "kelly_applied": 0.1,
+      "bet_size_dollars": 1000,
+      "market": "home_ml"
+    },
+    {
+      "date": "2025-12-14",
+      "home_team": "East Carolina Pirates",
+      "away_team": "Buffalo Bulls",
+      "side": "home",
+      "odds": -114,
+      "model_prob": 0.7421652194566798,
+      "implied_prob": 0.5327102803738317,
+      "edge": 0.20945493908284807,
+      "kelly_full": 0.23877863055444679,
+      "kelly_applied": 0.059694657638611696,
+      "bet_size_dollars": 597,
+      "market": "home_ml"
+    }
+  ]
+}
