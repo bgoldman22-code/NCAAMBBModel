@@ -1,0 +1,69 @@
+{
+  "date": "2025-12-22",
+  "model": "Variant B",
+  "min_edge": 0.1,
+  "kelly_fraction": 0.25,
+  "bankroll": 10000.0,
+  "num_picks": 4,
+  "total_bet_size": 4000,
+  "avg_edge": 0.29820834704045607,
+  "max_edge": 0.33766370232050646,
+  "picks": [
+    {
+      "date": "2025-12-23",
+      "home_team": "Oral Roberts Golden Eagles",
+      "away_team": "UT-Arlington Mavericks",
+      "side": "away",
+      "odds": -176,
+      "model_prob": 0.9753448617407963,
+      "implied_prob": 0.6376811594202898,
+      "edge": 0.33766370232050646,
+      "kelly_full": 0.5942881160840912,
+      "kelly_applied": 0.1,
+      "bet_size_dollars": 1000,
+      "market": "away_ml"
+    },
+    {
+      "date": "2025-12-22",
+      "home_team": "Texas Southern",
+      "away_team": "Abilene Christian",
+      "side": "away",
+      "odds": -192,
+      "model_prob": 0.9769750251373124,
+      "implied_prob": 0.6575342465753424,
+      "edge": 0.31944077856196995,
+      "kelly_full": 0.6133262948389822,
+      "kelly_applied": 0.1,
+      "bet_size_dollars": 1000,
+      "market": "away_ml"
+    },
+    {
+      "date": "2025-12-22",
+      "home_team": "Western Illinois Leathernecks",
+      "away_team": "SIU-Edwardsville Cougars",
+      "side": "away",
+      "odds": -245,
+      "model_prob": 0.994464486497178,
+      "implied_prob": 0.7101449275362319,
+      "edge": 0.2843195589609461,
+      "kelly_full": 0.6965829194543178,
+      "kelly_applied": 0.1,
+      "bet_size_dollars": 1000,
+      "market": "away_ml"
+    },
+    {
+      "date": "2025-12-23",
+      "home_team": "UTEP Miners",
+      "away_team": "North Dakota St Bison",
+      "side": "away",
+      "odds": -190,
+      "model_prob": 0.9065817621115052,
+      "implied_prob": 0.6551724137931034,
+      "edge": 0.2514093483184018,
+      "kelly_full": 0.4776777618049635,
+      "kelly_applied": 0.1,
+      "bet_size_dollars": 1000,
+      "market": "away_ml"
+    }
+  ]
+}
