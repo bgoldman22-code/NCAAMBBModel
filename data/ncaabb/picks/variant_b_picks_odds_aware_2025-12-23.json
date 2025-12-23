@@ -1,0 +1,41 @@
+{
+  "date": "2025-12-23",
+  "model": "Variant B",
+  "min_edge": 0.1,
+  "kelly_fraction": 0.25,
+  "bankroll": 10000.0,
+  "num_picks": 2,
+  "total_bet_size": 1891,
+  "avg_edge": 0.37494937282118834,
+  "max_edge": 0.4705013875899111,
+  "picks": [
+    {
+      "date": "2025-12-24",
+      "home_team": "Seton Hall Pirates",
+      "away_team": "Villanova Wildcats",
+      "side": "away",
+      "odds": 132,
+      "model_prob": 0.9015358703485318,
+      "implied_prob": 0.43103448275862066,
+      "edge": 0.4705013875899111,
+      "kelly_full": 0.35644044514387196,
+      "kelly_applied": 0.08911011128596799,
+      "bet_size_dollars": 891,
+      "market": "away_ml"
+    },
+    {
+      "date": "2025-12-23",
+      "home_team": "CSU Bakersfield Roadrunners",
+      "away_team": "Idaho Vandals",
+      "side": "away",
+      "odds": -245,
+      "model_prob": 0.9895422855886975,
+      "implied_prob": 0.7101449275362319,
+      "edge": 0.27939735805246557,
+      "kelly_full": 0.6845235272285406,
+      "kelly_applied": 0.1,
+      "bet_size_dollars": 1000,
+      "market": "away_ml"
+    }
+  ]
+}
