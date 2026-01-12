@@ -1,0 +1,83 @@
+{
+  "date": "2026-01-12",
+  "model": "Variant B",
+  "min_edge": 0.1,
+  "kelly_fraction": 0.25,
+  "bankroll": 10000.0,
+  "num_picks": 5,
+  "total_bet_size": 3329,
+  "avg_edge": 0.28578385764639724,
+  "max_edge": 0.3831544356272819,
+  "picks": [
+    {
+      "date": "2026-01-13",
+      "home_team": "SE Louisiana Lions",
+      "away_team": "New Orleans Privateers",
+      "side": "home",
+      "odds": -134,
+      "model_prob": 0.9558040082768545,
+      "implied_prob": 0.5726495726495726,
+      "edge": 0.3831544356272819,
+      "kelly_full": 0.5134269437405578,
+      "kelly_applied": 0.1,
+      "bet_size_dollars": 1000,
+      "market": "home_ml"
+    },
+    {
+      "date": "2026-01-13",
+      "home_team": "Prairie View Panthers",
+      "away_team": "Arkansas-Pine Bluff Golden Lions",
+      "side": "away",
+      "odds": 134,
+      "model_prob": 0.7757538719074186,
+      "implied_prob": 0.42735042735042733,
+      "edge": 0.3484034445569913,
+      "kelly_full": 0.2600025705649189,
+      "kelly_applied": 0.06500064264122972,
+      "bet_size_dollars": 650,
+      "market": "away_ml"
+    },
+    {
+      "date": "2026-01-13",
+      "home_team": "East Texas A&M Lions",
+      "away_team": "Texas A&M-CC Islanders",
+      "side": "away",
+      "odds": -260,
+      "model_prob": 0.9874541528339504,
+      "implied_prob": 0.7222222222222222,
+      "edge": 0.26523193061172823,
+      "kelly_full": 0.6896030195904934,
+      "kelly_applied": 0.1,
+      "bet_size_dollars": 1000,
+      "market": "away_ml"
+    },
+    {
+      "date": "2026-01-13",
+      "home_team": "Norfolk St",
+      "away_team": "Maryland-Eastern Shore Hawks",
+      "side": "away",
+      "odds": 215,
+      "model_prob": 0.5651215682609463,
+      "implied_prob": 0.31746031746031744,
+      "edge": 0.24766125080062884,
+      "kelly_full": 0.11519127944215296,
+      "kelly_applied": 0.02879781986053824,
+      "bet_size_dollars": 288,
+      "market": "away_ml"
+    },
+    {
+      "date": "2026-01-13",
+      "home_team": "Florida A&M Rattlers",
+      "away_team": "Grambling Tigers",
+      "side": "away",
+      "odds": 118,
+      "model_prob": 0.6431838229656315,
+      "implied_prob": 0.45871559633027525,
+      "edge": 0.18446822663535622,
+      "kelly_full": 0.15632900562318328,
+      "kelly_applied": 0.03908225140579582,
+      "bet_size_dollars": 391,
+      "market": "away_ml"
+    }
+  ]
+}
