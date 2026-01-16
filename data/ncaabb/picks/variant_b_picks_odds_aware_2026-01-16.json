@@ -1,0 +1,83 @@
+{
+  "date": "2026-01-16",
+  "model": "Variant B",
+  "min_edge": 0.1,
+  "kelly_fraction": 0.25,
+  "bankroll": 10000.0,
+  "num_picks": 5,
+  "total_bet_size": 3652,
+  "avg_edge": 0.21857957050388133,
+  "max_edge": 0.24766125080062884,
+  "picks": [
+    {
+      "date": "2026-01-17",
+      "home_team": "Boise State Broncos",
+      "away_team": "Colorado St Rams",
+      "side": "away",
+      "odds": 215,
+      "model_prob": 0.5651215682609463,
+      "implied_prob": 0.31746031746031744,
+      "edge": 0.24766125080062884,
+      "kelly_full": 0.11519127944215296,
+      "kelly_applied": 0.02879781986053824,
+      "bet_size_dollars": 288,
+      "market": "away_ml"
+    },
+    {
+      "date": "2026-01-17",
+      "home_team": "Ball State",
+      "away_team": "Ohio Bobcats",
+      "side": "away",
+      "odds": -225,
+      "model_prob": 0.9363025642377245,
+      "implied_prob": 0.6923076923076923,
+      "edge": 0.24399487193003222,
+      "kelly_full": 0.5489884618425726,
+      "kelly_applied": 0.1,
+      "bet_size_dollars": 1000,
+      "market": "away_ml"
+    },
+    {
+      "date": "2026-01-16",
+      "home_team": "Kent State Golden Flashes",
+      "away_team": "Toledo Rockets",
+      "side": "home",
+      "odds": -230,
+      "model_prob": 0.9018235567787974,
+      "implied_prob": 0.696969696969697,
+      "edge": 0.20485385980910042,
+      "kelly_full": 0.47116387756093103,
+      "kelly_applied": 0.1,
+      "bet_size_dollars": 1000,
+      "market": "home_ml"
+    },
+    {
+      "date": "2026-01-16",
+      "home_team": "Providence Friars",
+      "away_team": "Creighton Bluejays",
+      "side": "home",
+      "odds": 100,
+      "model_prob": 0.6999271014963184,
+      "implied_prob": 0.5,
+      "edge": 0.19992710149631843,
+      "kelly_full": 0.19992710149631843,
+      "kelly_applied": 0.04998177537407961,
+      "bet_size_dollars": 500,
+      "market": "home_ml"
+    },
+    {
+      "date": "2026-01-17",
+      "home_team": "DePaul Blue Demons",
+      "away_team": "Marquette Golden Eagles",
+      "side": "home",
+      "odds": -176,
+      "model_prob": 0.8341419279036165,
+      "implied_prob": 0.6376811594202898,
+      "edge": 0.19646076848332672,
+      "kelly_full": 0.34577095253065493,
+      "kelly_applied": 0.08644273813266373,
+      "bet_size_dollars": 864,
+      "market": "home_ml"
+    }
+  ]
+}
