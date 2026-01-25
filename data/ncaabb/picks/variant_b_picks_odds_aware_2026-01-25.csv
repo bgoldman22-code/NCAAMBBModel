@@ -1,0 +1,4 @@
+date,home_team,away_team,side,odds,model_prob,implied_prob,edge,kelly_full,kelly_applied,bet_size_dollars,market
+2026-01-25,Evansville Purple Aces,Southern Illinois Salukis,away,-162,0.8873121400045136,0.6183206106870229,0.2689915293174907,0.4357662774943349,0.1,1000,away_ml
+2026-01-25,South Florida Bulls,Florida Atlantic Owls,home,-250,0.9062510126499178,0.7142857142857143,0.1919652983642035,0.4799132459105089,0.1,1000,home_ml
+2026-01-25,IUPUI Jaguars,Fort Wayne Mastodons,away,-185,0.8136117920199246,0.6491228070175439,0.16448898500238074,0.30430462225440436,0.07607615556360109,761,away_ml
