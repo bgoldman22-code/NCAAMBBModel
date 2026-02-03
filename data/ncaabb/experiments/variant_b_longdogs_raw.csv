@@ -34,3 +34,4 @@ date,home_team,away_team,bet_side,american_odds,implied_prob_market,model_prob,e
 2026-01-30,Akron Zips,Kent State Golden Flashes,away,520,0.16129032258064516,0.4406866882121635,0.2793963656315184,
 2026-01-31,Clemson Tigers,Pittsburgh Panthers,away,590,0.14492753623188406,0.2871751247020057,0.14224758847012162,
 2026-02-01,Maryland Terrapins,Purdue Boilermakers,home,860,0.10416666666666667,0.2443954785780653,0.14022881191139863,
+2026-02-03,Eastern Michigan Eagles,Akron Zips,home,540,0.15625,0.26446209729974673,0.10821209729974673,
