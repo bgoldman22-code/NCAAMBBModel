@@ -1,0 +1,55 @@
+{
+  "date": "2026-02-09",
+  "model": "Variant B",
+  "min_edge": 0.1,
+  "kelly_fraction": 0.25,
+  "bankroll": 10000.0,
+  "num_picks": 3,
+  "total_bet_size": 2895,
+  "avg_edge": 0.365531955908631,
+  "max_edge": 0.4676596870497232,
+  "picks": [
+    {
+      "date": "2026-02-09",
+      "home_team": "Chicago St Cougars",
+      "away_team": "St. Francis (PA) Red Flash",
+      "side": "away",
+      "odds": 116,
+      "model_prob": 0.9306226500126862,
+      "implied_prob": 0.46296296296296297,
+      "edge": 0.4676596870497232,
+      "kelly_full": 0.40315490262907167,
+      "kelly_applied": 0.1,
+      "bet_size_dollars": 1000,
+      "market": "away_ml"
+    },
+    {
+      "date": "2026-02-10",
+      "home_team": "SE Louisiana Lions",
+      "away_team": "Incarnate Word Cardinals",
+      "side": "away",
+      "odds": 106,
+      "model_prob": 0.8780341604617679,
+      "implied_prob": 0.4854368932038835,
+      "edge": 0.39259726725788435,
+      "kelly_full": 0.37037478043196637,
+      "kelly_applied": 0.09259369510799159,
+      "bet_size_dollars": 926,
+      "market": "away_ml"
+    },
+    {
+      "date": "2026-02-10",
+      "home_team": "Kansas",
+      "away_team": "Arizona",
+      "side": "away",
+      "odds": -164,
+      "model_prob": 0.8575510346304068,
+      "implied_prob": 0.6212121212121212,
+      "edge": 0.2363389134182856,
+      "kelly_full": 0.38759581800598836,
+      "kelly_applied": 0.09689895450149709,
+      "bet_size_dollars": 969,
+      "market": "away_ml"
+    }
+  ]
+}
