@@ -1,0 +1,83 @@
+{
+  "date": "2026-02-13",
+  "model": "Variant B",
+  "min_edge": 0.1,
+  "kelly_fraction": 0.25,
+  "bankroll": 10000.0,
+  "num_picks": 5,
+  "total_bet_size": 4723,
+  "avg_edge": 0.2415965311387806,
+  "max_edge": 0.34552382585854247,
+  "picks": [
+    {
+      "date": "2026-02-14",
+      "home_team": "Pennsylvania Quakers",
+      "away_team": "Columbia Lions",
+      "side": "home",
+      "odds": -162,
+      "model_prob": 0.9638444365455654,
+      "implied_prob": 0.6183206106870229,
+      "edge": 0.34552382585854247,
+      "kelly_full": 0.5597485978908388,
+      "kelly_applied": 0.1,
+      "bet_size_dollars": 1000,
+      "market": "home_ml"
+    },
+    {
+      "date": "2026-02-14",
+      "home_team": "Rider Broncs",
+      "away_team": "Mt. St. Mary's Mountaineers",
+      "side": "away",
+      "odds": -245,
+      "model_prob": 0.9895422855886975,
+      "implied_prob": 0.7101449275362319,
+      "edge": 0.27939735805246557,
+      "kelly_full": 0.6845235272285406,
+      "kelly_applied": 0.1,
+      "bet_size_dollars": 1000,
+      "market": "away_ml"
+    },
+    {
+      "date": "2026-02-14",
+      "home_team": "Siena Saints",
+      "away_team": "Quinnipiac Bobcats",
+      "side": "home",
+      "odds": -210,
+      "model_prob": 0.9369919104922264,
+      "implied_prob": 0.6774193548387096,
+      "edge": 0.2595725556535168,
+      "kelly_full": 0.5451023668723851,
+      "kelly_applied": 0.1,
+      "bet_size_dollars": 1000,
+      "market": "home_ml"
+    },
+    {
+      "date": "2026-02-15",
+      "home_team": "Santa Clara Broncos",
+      "away_team": "Gonzaga",
+      "side": "away",
+      "odds": -180,
+      "model_prob": 0.8136117920199246,
+      "implied_prob": 0.6428571428571429,
+      "edge": 0.1707546491627817,
+      "kelly_full": 0.3073583684930071,
+      "kelly_applied": 0.07683959212325177,
+      "bet_size_dollars": 768,
+      "market": "away_ml"
+    },
+    {
+      "date": "2026-02-14",
+      "home_team": "Canisius Golden Griffins",
+      "away_team": "Iona Gaels",
+      "side": "away",
+      "odds": -250,
+      "model_prob": 0.867019981252311,
+      "implied_prob": 0.7142857142857143,
+      "edge": 0.15273426696659664,
+      "kelly_full": 0.3818356674164917,
+      "kelly_applied": 0.09545891685412293,
+      "bet_size_dollars": 955,
+      "market": "away_ml"
+    }
+  ]
+}
