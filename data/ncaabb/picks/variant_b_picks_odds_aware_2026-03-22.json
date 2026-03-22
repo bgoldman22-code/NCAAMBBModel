@@ -1,0 +1,55 @@
+{
+  "date": "2026-03-22",
+  "model": "Variant B",
+  "min_edge": 0.1,
+  "kelly_fraction": 0.25,
+  "bankroll": 10000.0,
+  "num_picks": 3,
+  "total_bet_size": 1753,
+  "avg_edge": 0.2088126398353064,
+  "max_edge": 0.23859134679513516,
+  "picks": [
+    {
+      "date": "2026-03-22",
+      "home_team": "Kansas",
+      "away_team": "St. John's Red Storm",
+      "side": "away",
+      "odds": -164,
+      "model_prob": 0.8598034680072564,
+      "implied_prob": 0.6212121212121212,
+      "edge": 0.23859134679513516,
+      "kelly_full": 0.3912898087440216,
+      "kelly_applied": 0.0978224521860054,
+      "bet_size_dollars": 978,
+      "market": "away_ml"
+    },
+    {
+      "date": "2026-03-23",
+      "home_team": "Connecticut",
+      "away_team": "UCLA",
+      "side": "away",
+      "odds": 164,
+      "model_prob": 0.6002962471021394,
+      "implied_prob": 0.3787878787878788,
+      "edge": 0.22150836831426057,
+      "kelly_full": 0.13506607824040281,
+      "kelly_applied": 0.033766519560100704,
+      "bet_size_dollars": 338,
+      "market": "away_ml"
+    },
+    {
+      "date": "2026-03-23",
+      "home_team": "Alabama Crimson Tide",
+      "away_team": "Texas Tech Red Raiders",
+      "side": "home",
+      "odds": -105,
+      "model_prob": 0.678533326347743,
+      "implied_prob": 0.5121951219512195,
+      "edge": 0.16633820439652347,
+      "kelly_full": 0.17465511461634967,
+      "kelly_applied": 0.043663778654087416,
+      "bet_size_dollars": 437,
+      "market": "home_ml"
+    }
+  ]
+}
