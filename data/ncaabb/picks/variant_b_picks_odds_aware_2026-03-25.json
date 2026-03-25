@@ -1,0 +1,41 @@
+{
+  "date": "2026-03-25",
+  "model": "Variant B",
+  "min_edge": 0.1,
+  "kelly_fraction": 0.25,
+  "bankroll": 10000.0,
+  "num_picks": 2,
+  "total_bet_size": 2000,
+  "avg_edge": 0.18473255387821108,
+  "max_edge": 0.21490503437974284,
+  "picks": [
+    {
+      "date": "2026-03-26",
+      "home_team": "Purdue Boilermakers",
+      "away_team": "Texas Longhorns",
+      "side": "home",
+      "odds": -345,
+      "model_prob": 0.9901859332561473,
+      "implied_prob": 0.7752808988764045,
+      "edge": 0.21490503437974284,
+      "kelly_full": 0.7414223686101129,
+      "kelly_applied": 0.1,
+      "bet_size_dollars": 1000,
+      "market": "home_ml"
+    },
+    {
+      "date": "2026-03-25",
+      "home_team": "Dayton Flyers",
+      "away_team": "Illinois St Redbirds",
+      "side": "home",
+      "odds": -315,
+      "model_prob": 0.9135962179549926,
+      "implied_prob": 0.7590361445783133,
+      "edge": 0.15456007337667932,
+      "kelly_full": 0.48686423113653987,
+      "kelly_applied": 0.1,
+      "bet_size_dollars": 1000,
+      "market": "home_ml"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+date,home_team,away_team,side,odds,model_prob,implied_prob,edge,kelly_full,kelly_applied,bet_size_dollars,market
+2026-03-26,Purdue Boilermakers,Texas Longhorns,home,-345,0.9901859332561473,0.7752808988764045,0.21490503437974284,0.7414223686101129,0.1,1000,home_ml
+2026-03-25,Dayton Flyers,Illinois St Redbirds,home,-315,0.9135962179549926,0.7590361445783133,0.15456007337667932,0.48686423113653987,0.1,1000,home_ml
