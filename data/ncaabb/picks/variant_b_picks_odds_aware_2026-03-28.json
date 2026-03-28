@@ -1,0 +1,41 @@
+{
+  "date": "2026-03-28",
+  "model": "Variant B",
+  "min_edge": 0.1,
+  "kelly_fraction": 0.25,
+  "bankroll": 10000.0,
+  "num_picks": 2,
+  "total_bet_size": 2000,
+  "avg_edge": 0.1970820601274128,
+  "max_edge": 0.2302317219475688,
+  "picks": [
+    {
+      "date": "2026-03-29",
+      "home_team": "Michigan Wolverines",
+      "away_team": "Tennessee Volunteers",
+      "side": "home",
+      "odds": -320,
+      "model_prob": 0.9921364838523307,
+      "implied_prob": 0.7619047619047619,
+      "edge": 0.2302317219475688,
+      "kelly_full": 0.7367415102322201,
+      "kelly_applied": 0.1,
+      "bet_size_dollars": 1000,
+      "market": "home_ml"
+    },
+    {
+      "date": "2026-03-28",
+      "home_team": "Illinois Fighting Illini",
+      "away_team": "Iowa Hawkeyes",
+      "side": "home",
+      "odds": -315,
+      "model_prob": 0.9229685428855701,
+      "implied_prob": 0.7590361445783133,
+      "edge": 0.1639323983072568,
+      "kelly_full": 0.516387054667859,
+      "kelly_applied": 0.1,
+      "bet_size_dollars": 1000,
+      "market": "home_ml"
+    }
+  ]
+}
