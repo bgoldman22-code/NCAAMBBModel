@@ -1,0 +1,2 @@
+date,home_team,away_team,side,odds,model_prob,implied_prob,edge,kelly_full,kelly_applied,bet_size_dollars,market
+2026-03-29,Michigan Wolverines,Tennessee Volunteers,home,-360,0.9847207853594857,0.782608695652174,0.20211208970731176,0.7276035229463226,0.1,1000,home_ml

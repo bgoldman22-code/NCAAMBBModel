@@ -1,0 +1,27 @@
+{
+  "date": "2026-03-29",
+  "model": "Variant B",
+  "min_edge": 0.1,
+  "kelly_fraction": 0.25,
+  "bankroll": 10000.0,
+  "num_picks": 1,
+  "total_bet_size": 1000,
+  "avg_edge": 0.20211208970731176,
+  "max_edge": 0.20211208970731176,
+  "picks": [
+    {
+      "date": "2026-03-29",
+      "home_team": "Michigan Wolverines",
+      "away_team": "Tennessee Volunteers",
+      "side": "home",
+      "odds": -360,
+      "model_prob": 0.9847207853594857,
+      "implied_prob": 0.782608695652174,
+      "edge": 0.20211208970731176,
+      "kelly_full": 0.7276035229463226,
+      "kelly_applied": 0.1,
+      "bet_size_dollars": 1000,
+      "market": "home_ml"
+    }
+  ]
+}
