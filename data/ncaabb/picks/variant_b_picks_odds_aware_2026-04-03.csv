@@ -1,0 +1,2 @@
+date,home_team,away_team,side,odds,model_prob,implied_prob,edge,kelly_full,kelly_applied,bet_size_dollars,market
+2026-04-05,Arizona,Michigan Wolverines,away,-125,0.742622395486352,0.5555555555555556,0.18706683993079642,0.23383354991349553,0.05845838747837388,585,away_ml

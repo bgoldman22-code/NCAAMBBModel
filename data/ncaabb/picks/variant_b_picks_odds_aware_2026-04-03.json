@@ -1,0 +1,27 @@
+{
+  "date": "2026-04-03",
+  "model": "Variant B",
+  "min_edge": 0.1,
+  "kelly_fraction": 0.25,
+  "bankroll": 10000.0,
+  "num_picks": 1,
+  "total_bet_size": 585,
+  "avg_edge": 0.18706683993079642,
+  "max_edge": 0.18706683993079642,
+  "picks": [
+    {
+      "date": "2026-04-05",
+      "home_team": "Arizona",
+      "away_team": "Michigan Wolverines",
+      "side": "away",
+      "odds": -125,
+      "model_prob": 0.742622395486352,
+      "implied_prob": 0.5555555555555556,
+      "edge": 0.18706683993079642,
+      "kelly_full": 0.23383354991349553,
+      "kelly_applied": 0.05845838747837388,
+      "bet_size_dollars": 585,
+      "market": "away_ml"
+    }
+  ]
+}
