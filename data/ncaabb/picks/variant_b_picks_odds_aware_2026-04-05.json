@@ -1,0 +1,27 @@
+{
+  "date": "2026-04-05",
+  "model": "Variant B",
+  "min_edge": 0.1,
+  "kelly_fraction": 0.25,
+  "bankroll": 10000.0,
+  "num_picks": 1,
+  "total_bet_size": 1000,
+  "avg_edge": 0.3159986404917665,
+  "max_edge": 0.3159986404917665,
+  "picks": [
+    {
+      "date": "2026-04-05",
+      "home_team": "West Virginia Mountaineers",
+      "away_team": "Oklahoma Sooners",
+      "side": "away",
+      "odds": -170,
+      "model_prob": 0.9456282701213962,
+      "implied_prob": 0.6296296296296297,
+      "edge": 0.3159986404917665,
+      "kelly_full": 0.5371976888360029,
+      "kelly_applied": 0.1,
+      "bet_size_dollars": 1000,
+      "market": "away_ml"
+    }
+  ]
+}

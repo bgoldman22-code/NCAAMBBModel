@@ -1,0 +1,2 @@
+date,home_team,away_team,side,odds,model_prob,implied_prob,edge,kelly_full,kelly_applied,bet_size_dollars,market
+2026-04-05,West Virginia Mountaineers,Oklahoma Sooners,away,-170,0.9456282701213962,0.6296296296296297,0.3159986404917665,0.5371976888360029,0.1,1000,away_ml
